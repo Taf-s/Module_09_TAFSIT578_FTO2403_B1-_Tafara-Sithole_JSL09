@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #background-image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #author {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: black;
+            border-radius: 5px;
+            padding: 2px;
+            opacity: 1;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #time {
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+
+        #weather {
+
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-self: flex-start;
+            font-size: 18px;
+            color: white;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        p.weather-city {
+            width: 100%;
+            text-align: right;
+            margin-right: 10px;
+            margin-top: -10px;
+        }
+
+        p.weather-temp {
+            font-size: 1.7rem;
+            margin-right: 5px;
+            margin-top: 25px;
+            margin-left: -10px;
+        }
+
+
+        #crypto {
+            font-size: 18px;
+            color: white;
+            text-align: left;
+        }
+
+        #crypto-top {
+            display: flex;
+            align-items: center;
+        }
+
+        #crypto-top>span {
+            margin-left: 10px;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: orange;
+            border-radius: 5px;
+            padding: 2px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background-image-container">
+        <p id="author"></p>
+    </div>
+    <div class="container">
+        <div id="crypto">
+            <div id="crypto-top"></div>
+            <div id="crypto-bottom"></div>
+        </div>
+        <div id="weather">weather</div>
+        <p></p>
+        <div id="time">Time</div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
